@@ -1,4 +1,4 @@
-#include "ergov.dtsi"
+#include "../ergov/ergov.dtsi"
 
 &kscan0 {
     col-gpios
