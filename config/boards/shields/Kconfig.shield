@@ -1,6 +1,0 @@
-config SHIELD_ERGOV_LEFT
-    def_bool $(shields_list_contains,ergov_left)
-
-config SHIELD_ERGOV_RIGHT
-    def_bool $(shields_list_contains,ergov_right)
-
