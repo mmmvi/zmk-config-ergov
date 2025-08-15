@@ -10,14 +10,16 @@
 
 / {
     behaviors {
-        reset: reset_bonds {
-            compatible = "zmk,behavior-settings-reset";
-            label = "Settings Reset";
+        reset_bonds: reset_bonds {
+            compatible = "zmk,behavior-reset-bonds";
+            label = "RESET_BONDS";
             #binding-cells = <0>;
         };
     };
+};
 
-    	keymap {
+/ {
+    keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
