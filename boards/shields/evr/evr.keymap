@@ -13,6 +13,7 @@
         reset: reset_bonds {
             compatible = "zmk,behavior-settings-reset";
             label = "Settings Reset";
+            #binding-cells = <0>;
         };
     };
 
