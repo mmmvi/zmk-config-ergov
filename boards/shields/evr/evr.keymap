@@ -9,6 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    chosen {
+        zmk,studio-layout = &default_layer;
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
