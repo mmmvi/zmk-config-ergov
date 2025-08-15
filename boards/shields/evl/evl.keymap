@@ -49,12 +49,13 @@
                 &trans     &trans       &trans       &trans       &trans       &trans
                 &trans     &trans       &trans       &trans       &trans       &trans
                 &trans     &trans       &trans       &trans       &trans       &trans
-            >;
+               >;
         };
+    };
+
+    chosen {
+        zmk,studio-layout = &default_layer;
+        zmk,default-layer = &default_layer;
     };
 };
 
-&{/chosen} {
-    zmk,studio-layout = &default_layer;
-    zmk,default-layer = &default_layer;
-};
