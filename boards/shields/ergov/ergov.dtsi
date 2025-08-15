@@ -2,8 +2,26 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,studio-layout = &ergov_layout;
+	zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+    };
+
+    ergov_layout: keymap_transform_0 {
+        compatible = "zmk,studio-layout";
+        display-name = "ErgoV Split";
+
+        halves = <&left_half &right_half>;
+    };
+
+    left_half: left_half {
+        compatible = "zmk,studio-layout-half";
+        json-file = "evl.json";
+    };
+
+    right_half: right_half {
+        compatible = "zmk,studio-layout-half";
+        json-file = "evr.json";
     };
 
     default_transform: keymap_transform_0 {
