@@ -9,52 +9,52 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    chosen {
-        zmk,studio-layout = &default_layer;
-        zmk,default-layer = &default_layer;
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer: default_layer {
+            bindings = <
+                &bt BT_CLR  &kp N1   &kp N2   &kp N3   &kp N4   &kp N5
+                &kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T
+                &kp CAPS    &kp A    &kp S    &kp D    &kp F    &kp G
+                &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B
+                &kp LCTRL   &kp LGUI &kp LALT &tog 1   &mo 3    &kp SPACE
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+                &trans     &trans       &trans       &trans       &trans       &trans
+                &trans     &trans       &kp UP       &trans       &trans       &trans
+                &trans     &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans
+                &trans     &trans       &trans       &trans       &trans       &trans
+                &trans     &trans       &trans       &trans       &trans       &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+                &trans    &trans   &trans &trans   &trans   &trans
+                &trans    &trans   &trans &trans   &trans   &trans
+                &trans    &trans   &trans &trans   &trans   &trans
+                &trans    &trans   &trans &trans   &trans   &trans
+                &trans    &trans   &trans &trans   &trans   &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+                &kp GRAVE  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5
+                &trans     &trans       &trans       &trans       &trans       &trans
+                &trans     &trans       &trans       &trans       &trans       &trans
+                &trans     &trans       &trans       &trans       &trans       &trans
+                &trans     &trans       &trans       &trans       &trans       &trans
+            >;
+        };
     };
 };
 
-&keymap {
-    compatible = "zmk,keymap";
-
-    default_layer: default_layer {
-        bindings = <
-            &bt BT_CLR  &kp N1   &kp N2   &kp N3   &kp N4   &kp N5
-            &kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T
-            &kp CAPS    &kp A    &kp S    &kp D    &kp F    &kp G
-            &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B
-            &kp LCTRL   &kp LGUI &kp LALT &tog 1   &mo 3    &kp SPACE
-        >;
-    };
-
-    layer_1 {
-        bindings = <
-            &trans     &trans       &trans       &trans       &trans       &trans
-            &trans     &trans       &kp UP       &trans       &trans       &trans
-            &trans     &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans
-            &trans     &trans       &trans       &trans       &trans       &trans
-            &trans     &trans       &trans       &trans       &trans       &trans
-        >;
-    };
-
-    layer_2 {
-        bindings = <
-            &trans    &trans   &trans &trans   &trans   &trans
-            &trans    &trans   &trans &trans   &trans   &trans
-            &trans    &trans   &trans &trans   &trans   &trans
-            &trans    &trans   &trans &trans   &trans   &trans
-            &trans    &trans   &trans &trans   &trans   &trans
-        >;
-    };
-
-    layer_3 {
-        bindings = <
-            &kp GRAVE  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5
-            &trans     &trans       &trans       &trans       &trans       &trans
-            &trans     &trans       &trans       &trans       &trans       &trans
-            &trans     &trans       &trans       &trans       &trans       &trans
-            &trans     &trans       &trans       &trans       &trans       &trans
-        >;
-    };
+&{/chosen} {
+    zmk,studio-layout = &default_layer;
+    zmk,default-layer = &default_layer;
 };
