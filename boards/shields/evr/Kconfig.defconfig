@@ -1,5 +1,12 @@
+if SHIELD_EVL
 config ZMK_STUDIO
     default y
+endif
+
+if SHIELD_EVR
+config ZMK_STUDIO
+    default y
+endif
 
 if SHIELD_EVL
 
