@@ -1,4 +1,4 @@
-if SHIELD_ERGOV_LEFT
+if SHIELD_EVL
 
 config ZMK_KEYBOARD_NAME
     default "ErgoV"
@@ -8,7 +8,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_ERGOV_LEFT || SHIELD_ERGOV_RIGHT
+if SHIELD_EVL || SHIELD_EVR
 
 config ZMK_SPLIT
     default y

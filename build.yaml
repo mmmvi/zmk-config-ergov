@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ergov_left
+    shield: evl
   - board: nice_nano_v2
-    shield: ergov_right
+    shield: evr
