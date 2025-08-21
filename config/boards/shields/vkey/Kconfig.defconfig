@@ -1,15 +1,15 @@
-if SHIELD_TYPHON_LEFT
+if SHIELD_VKEY_LEFT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Typhon"
+    default "VKey"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TYPHON_LEFT || SHIELD_TYPHON_RIGHT
+if SHIELD_VKEY_LEFT || SHIELD_VKEY_RIGHT
 
 config ZMK_SPLIT
     default y

@@ -1,4 +1,4 @@
-#include "typhon.dtsi"
+#include "vkey.dtsi"
 
 &kscan0 {
     col-gpios
